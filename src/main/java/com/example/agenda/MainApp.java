@@ -18,9 +18,9 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
-    private Stage primaryStage;
+    private static Stage primaryStage;
     private BorderPane rootLayout;
-    private ObservableList<Persona> personData = FXCollections.observableArrayList();
+    private static ObservableList<Persona> personData = FXCollections.observableArrayList();
 
     /**
      * Constructor
@@ -133,11 +133,11 @@ public class MainApp extends Application {
     /**
      * Opens a dialog to show birthday statistics.
      */
-    public static void showBirthdayStatistics() {
+    public void showBirthdayStatistics() {
         try {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/BirthdayStatistics.fxml"));
+            loader.setLocation(MainApp.class.getResource("BirthdayStatistics.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Birthday Statistics");

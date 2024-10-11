@@ -124,10 +124,8 @@ public class PersonOverviewController {
         }
     }
 
-    /**
-     * Called when the user clicks the edit button. Opens a dialog to edit
-     * details for the selected person.
-     */
+
+     //Called when the user clicks the edit button.
     @FXML
     private void handleEditPerson() {
         Persona selectedPerson = personTable.getSelectionModel().getSelectedItem();
